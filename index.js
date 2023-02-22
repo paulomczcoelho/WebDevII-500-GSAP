@@ -1,19 +1,51 @@
-gsap.to(".logo", {rotation:0, x:100, duration: 3});
-gsap.to(".title", {opacity:1, duration:1, delay:2})
-gsap.fromTo(".menu-links ul li", {autoAlpha:0}, {autoAlpha:1, duration:1,
-    stagger:{each:01, from:"start", ease:"power4.out"}
-})
+gsap.from(".logo", {
+    x:-300, 
+    duration: 2,
+    // autoAlpha: 0,
+});
+gsap.from(".menu-links ul li", {
+    autoAlpha:0, 
+    // autoAlpha:1, 
+    duration:4,
+    stagger:0.1, 
+    delay:1,
+});
+gsap.to(".title", {
+    opacity:1, 
+    duration:3, 
+    delay:2,
+});
+gsap.to(".title", {
+    opacity:1, 
+    duration:3, 
+    delay:2,
+});
+gsap.to(".tagline",{
+    y: -40, 
+    autoAlpha:0, 
+    autoAlpha:1, 
+    duration:2, 
+    delay:2,
+});
+gsap.to(".desc",{
+    y: -40, 
+    autoAlpha:0, 
+    autoAlpha:1, 
+    duration:2, 
+    delay:2,
+});
+gsap.from(".beer",{
+    autoAlpha: 0,
+    delay: 4,
+    duration: 2,
+    y: -100, stagger:01,      
+});
 
-
-
-gsap.from('.beer',{autoAlpha: 0,
-delay: 0.3,
-duration: 2,
-y: -100})
-gsap.from('img', {
-    // ease: "power4.out"
-    ease: "bounce",
-    repeat: -1, // -1 infinity loops
-    yoyo: true,
-    repeatDelay: 2 // delay within each repeat
+gsap.from(".beer img", {
+delay:5,
+y:20,
+ease: "BounceInOut",
+repeat: -1, // -1 infinity loops
+yoyo: true,
+repeatDelay: 3 // delay within each repeat)
 })
