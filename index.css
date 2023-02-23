@@ -1,85 +1,91 @@
-body{
-    font-family: poppins;
-}
-.wrapper{
-    display: flex;
-    flex-direction: column;
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-}
-.nav .logo{
-    margin: 10px 50px;
-    font-size: 20px;
-    font-family: poppins;
-    text-transform: uppercase;
-}
-.menu-links{
-    display: flex;
-    width: 540px;
-}
-.menu-links ul{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 5px 10px;
-    padding: 0;
-}
-.menu-links ul li{
-    list-style: none;
-    margin: 0 10px;
-    text-transform: uppercase;
-    font-size: 10px;
-    visibility: hidden;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-}
-.tagline{
-    color: rgb(144, 141, 136); 
-    margin-left: 207px;
-    margin-top: 10px;
-    position: relative;
-    top: 40px;   
-    opacity: 0;
+.body-secondary {
+    font-family: "Montserrat";
+    font-size: 12px;
 }
 
-.title{
-    font-size: 158px;
-    line-height: 1;
-    width: 920px;
-    margin: 0 auto;
+.wrapper:is(".beer") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
     text-transform: uppercase;
-    font-family: poppins;
-    opacity: 0;
+    font-weight: 600;
 }
-.desc{
-    width: 920px;
-    margin: 0 auto;
-    position: relative;
-    top: 50px;
-    opacity: 0;
+
+.logo {
+    font-size: 40px;
 }
-.desc span{
-    color: greenyellow;
+
+.menu-links ul li {
+    display: inline-block;
+    padding-right: 20px;
 }
-.desc p:last-child {
-    width: 297px;
-    font-size: 11px;
+.menu-links ul li a {
+    text-decoration: none;
+    color: inherit;
 }
-.beer{
+.menu-links ul li a:hover {
+    color: rgb(251, 59, 0);
+}
+
+.content {
     position: absolute;
-    width:100%;
-    top: 90px;
-    left: -120px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: -1;
 }
+
+.title {
+    flex: 0 0 100%;
+    font-size: 200px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.tagline {
+    flex: 1;
+    font-size: 30px;
+    color: #999;
+}
+
+.desc {
+    flex: 0 0 32%;
+}
+
+.desc p:nth-child(1) {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.desc p:nth-child(2) {
+    line-height: 2;
+}
+
+.desc span {
+    color: #aecd31;
+}
+
+.beer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
 .beer img{
-    display: block;
-    margin: 0 auto;
-    width: 405px;
- 
+    max-height: 600px;
 }
